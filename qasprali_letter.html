@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Əlibəy Hüseynzadənin Nəriman Nərimanovun vəfatı ilə bağlı məktubu</title>
+<style>
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f5f2eb;
+  color: #292929;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.8;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
+h1 {
+  text-align: center;
+  font-size: 25px;
+  color: #633d2d;
+  line-height: 1.4;
+}
+.subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 25px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 25px 0;
+}
+button {
+  padding: 10px 22px;
+  border: 1px solid #754b38;
+  background: white;
+  color: #754b38;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+button.active, button:hover {
+  background: #754b38;
+  color: white;
+}
+.letter {
+  display: none;
+}
+.letter.active {
+  display: block;
+}
+.letter p {
+  text-align: justify;
+  margin-bottom: 18px;
+}
+.signature {
+  text-align: right !important;
+  font-weight: bold;
+  margin-top: 25px;
+}
+.note {
+  font-size: 14px;
+  color: #666;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  margin-top: 25px;
+}
+.footer {
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+  margin-top: 35px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>ƏLİBƏY HÜSEYNZADƏNİN NƏRİMAN NƏRİMANOVUN VƏFATI İLƏ BAĞLI MƏKTUBU</h1>
+<div class="subtitle">Konstantinopol, 1925-ci il</div>
+
+<div class="buttons">
+<button class="active" onclick="showLang('az',this)">AZƏRBAYCANCA</button>
+<button onclick="showLang('ru',this)">РУССКИЙ</button>
+<button onclick="showLang('en',this)">ENGLISH</button>
+</div>
+
+<!-- AZERBAIJANI -->
+<div id="az" class="letter active">
+
+<p>Rizvanın ölümü münasibətilə (N. Nərimanovun kiçik qardaşıdır, xəstələnmiş, 1923-cü ilin əvvəllərində vəfat etmişdir – R.Q.) mən rəhmətlik Nərimanə başsağlığı yazmışdım. Nərimanın özünün ölümü münasibətilə isə heç kimə başsağlığı yaza bilmədim, çünki onun yaxınlarından kimin sağ-salamat olduğunu bilmirdim. Əgər bir kimsəsi varsa, zəhmət olmasa, mənim onlara dərin hüznlə başsağlığı verdiyimi yetir. Axı biz hamımız bir-birimizi lap uşaqlıqdan tanıyır və sevirdik!</p>
+
+<p class="signature">Əlibəy Hüseynzadə</p>
+
+<p class="note">(1925-ci ildə Konstantinopoldan doktor Bəhram bəy Axundova göndərdiyi məktubdan.)</p>
+
+</div>
+
+<!-- RUSSIAN -->
+<div id="ru" class="letter">
+
+<p>По случаю смерти Ризвана (младшего брата Н. Нариманова, который заболел и скончался в начале 1923 года, — Р. Г.) я написал соболезнование покойному Нариману. Однако по случаю смерти самого Наримана я не смог выразить соболезнования никому, поскольку не знал, кто из его близких остался в живых. Если у него есть кто-либо из родных, будьте добры передать им мои глубочайшие соболезнования. Ведь все мы знали и любили друг друга с самого детства!</p>
+
+<p class="signature">Али-бек Гусейнзаде</p>
+
+<p class="note">(Из письма, отправленного доктору Бахрам-беку Ахундову из Константинополя в 1925 году.)</p>
+
+</div>
+
+<!-- ENGLISH -->
+<div id="en" class="letter">
+
+<p>On the occasion of Rizvan's death (N. Narimanov's younger brother, who fell ill and passed away in early 1923 — R. G.), I had written a letter of condolence to the late Nariman. However, following Nariman's own death, I was unable to send condolences to anyone, because I did not know which of his relatives were still alive. If he has any family members, please kindly convey my deepest condolences to them. After all, we had all known and loved one another since childhood!</p>
+
+<p class="signature">Ali bey Huseynzade</p>
+
+<p class="note">(From a letter sent from Constantinople to Dr. Bahram bey Akhundov in 1925.)</p>
+
+</div>
+
+<div class="footer">
+N. Nərimanov Memorial Museum<br>
+Historical Letters Collection
+</div>
+
+</div>
+
+<script>
+function showLang(lang, button) {
+  document.querySelectorAll('.letter').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById(lang).classList.add('active');
+
+  document.querySelectorAll('.buttons button').forEach(function(btn) {
+    btn.classList.remove('active');
+  });
+  button.classList.add('active');
+}
+</script>
+</body>
+</html>

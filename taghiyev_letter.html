@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>N. Nərimanovun H. Z. Tağıyevə məktubları</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #f5f0e6;
+    color: #292b24;
+    font-family: Georgia, serif;
+    line-height: 1.8;
+}
+
+header {
+    background: #263c35;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+
+header p {
+    color: #e6d5ad;
+    letter-spacing: 2px;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+.languages {
+    text-align: center;
+    margin: 25px 0;
+}
+
+button {
+    background: #263c35;
+    color: white;
+    border: 0;
+    padding: 11px 25px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover, button.active {
+    background: #aa8950;
+}
+
+.document {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-left: 5px solid #aa8950;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.document h2 {
+    color: #263c35;
+    text-align: center;
+    font-size: 22px;
+}
+
+.document h3 {
+    text-align: center;
+    color: #8b713e;
+    font-size: 17px;
+}
+
+.date {
+    text-align: center;
+    font-weight: bold;
+}
+
+.letter-text {
+    white-space: pre-line;
+    text-align: justify;
+}
+
+footer {
+    background: #263c35;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media(max-width:600px) {
+    .document { padding: 18px; }
+    header h1 { font-size: 19px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>N. NƏRİMANOV MEMORIAL MUSEUM</h1>
+<p>SCAN & HEAR: HISTORIC LETTERS</p>
+</header>
+
+<main>
+
+<div class="languages">
+<button id="azBtn" class="active" onclick="changeLanguage('az')">AZ</button>
+<button id="ruBtn" onclick="changeLanguage('ru')">RU</button>
+<button id="enBtn" onclick="changeLanguage('en')">EN</button>
+</div>
+
+<section class="document">
+<h2 id="title1"></h2>
+<h3 id="subtitle1"></h3>
+<p class="date" id="date1"></p>
+<div class="letter-text" id="text1"></div>
+</section>
+
+<section class="document">
+<h2 id="title2"></h2>
+<h3 id="subtitle2"></h3>
+<div class="letter-text" id="text2"></div>
+</section>
+
+</main>
+
+<footer>
+N. Nərimanov Memorial Museum | Scan & Hear | 2026
+</footer>
+
+<script>
+
+const content = {
+
+az: {
+title1: "H. Z. Tağıyevə verilmiş borc öhdəliyi",
+subtitle1: "N. Nərimanovun borc öhdəliyi",
+date1: "27 iyun 1902-ci il",
+
+text1: `1902-ci il iyunun 27-də mən, aşağıda imza edən kollec katibi Nəriman Nərimanov, bu iltizamı fəxri fəxri vətəndaş Hacı Zeynalabdin Tağıyevə verirəm ondan ötrü ki, o, Tağıyev, ali məktəbdə təhsilimi davam etdirmək üçün mənə beş il ərzində, birinci iki ilin hərəsində 600 manat, son üç ilin hərəsində 360 manat verir, bu da cəmi iki min iki yüz səksən (2280) manat edir və mən elmlər kursunu başa çatdırandan sonra bu məbləği tamamilə ona, Tağıyeva qaytaracağıma söz verirəm. Bu barədə imza edirəm.`,
+
+title2: "N. Nərimanovun H. Z. Tağıyevə məktubu",
+subtitle2: "ODESSADAN",
+
+text2: `Mədrəseyi-tibbiyyə tələbəsi cənab müstətab Nəriman bəy Nərimanov tərəfindən göndərilən məktubdur.
+
+Hörmətli Hacı!
+
+Müsəlman studentlərinin tərəfindən yazıb cənabınızaməlumat edirik ki, Siz cənabı həmişəlik paçotnı çlen seçib böyük təşəkkürlər edirlər. Sağ olsun Hacı deyib isminizi hörmət ilə zikr edirlər!
+
+Dəxi özümə borc bilib Baxçasaraya və Simferopola studentlərin səyahətini yazıram, yəni yanvar ayının 5-də səkkiz nəfər student Baxçasarayda bulunduq şəhərin mütəşəxxis adamları ilə tapışıb bir-birimizin dərdindən və məqsədindən xəbərdar olurduq, ikinci günü qaradskoy qlava Mustafa Mirzə hamını nahara dəvət etdi. Üçüncü gün İsmayıl Qasprinski və sonra Baxçasaray müəllimləri hamını nahara dəvət edib hörmətlər etdilər.
+
+Yanvarın 7-də bunların hörmətlərinin müqabilində biz dəxi Baxçasarayda müsəlmanlar üçün teatr verib əhli Baxçasaray studentlərdən razı qaldılar. Yanvarın 8-də İsmayıl bəy Qasprinski ilə bərabər Baxçasarayda olan müsəlman məktəblərinə vardıq.
+
+Bu bir özgə halətdir! Özgə halətdir: göz gərək, qulaq gərək həmin məktəbləri görüb bülbülə bənzər tatar babalarına qulaq asa! Belə qeyrət, belə fədakarlıq mən hələ görməmişəm.
+
+Hansı məktəbə getdik 7 və 8 sinifdə tatar balaları orada türkcə yazırlar və oxuyurlar. Bundan sonra əlavə tarixdən və çografiyadan və qeyri dünyəvi elmlərdən verdikləri cavablara insan təəccüb edir.
+
+Hərgah on ildə belə getsə demək olur ki, Baxçasaray məktəblərində ən qeyrətli, ən maarifli və ən məlumatlı müsəlman balaları çıxıb millətin bəzəki olsunlar!
+
+Baxçasaray məktəbləri və burada olan müəllimlər bir qeyri aləmdir! Bu, məktəblərdən Qafqazdan hər şəhərdə bir məktəb olsaydı, yəqin ki, bir az tez zamanda Qafqaz müsəlmanları dəyişərdilər. Əlbəttə hər şəhərdə İsmayıl bəy Qasprinski kimi zat olmağı lazım gəlirdi. Amma çifayda bu zati-möhtərəm bizim aramızda təkdir.
+
+“Tərcüman” qəzeti ilə İsmayıl bəy Qaspinskinin millətə olan hörmətlərini bilmək olmaz. Gərəkdir Baxçasaraya gedib düşünəsiz ki, bu qeyrətli müsəlman kiçik və çirkin Baxçasarayda əyləşib nə işlər edir və millətə nə xidmət göstərir.
+
+Göstərdigimiz qayda və qanunu, məktəblərin vəsf halını dil ilə və qələm ilə təhrirə gətirmək mümkün deyildir. Bakı məktəbdarlarından bir nəfər Baxçasaraya göndərib üsuli-cədid ilə aşına olmağı və məktəblərin proqrammasını bilməyi bu zəmanədə vacib olan işlərdən biridir.
+
+Həmin məktəbdar qız məktəbi ilə də aşina olar. Baxçasarayda qız məktəbləri çoxdur. Ancaq əvvəliminci məktəbi İsmayıl Qaspinskinin bacısı açıbdır və qayət bir gözəl görümlü məktəbdir. Bu xanım tatar qızlarma böyük zəhmətlər çəkir və böyük xidmətlər göstərir.
+
+Sağ olsunlar bacı və qardaş! Sağ və var olsun Baxçasaray məktəbləri.
+
+Yanvarın 12-də Baxçasaraydan Simferopola gedib orada dəxi müsəlmanlar üçün teatr verdik. Simferopol fəalları bizlərə böyük hörmətlər etdilər.
+
+Qulluğunuzda həmişə hazır.`,
+
+},
+
+ru: {
+title1: "Обязательство о возврате долга, выданное Г. З. Тагиеву",
+subtitle1: "Н. Нариманов",
+date1: "27 июня 1902 года",
+
+text1: `27 июня 1902 года я, нижеподписавшийся коллежский секретарь Нариман Нариманов, даю настоящее обязательство почётному гражданину Гаджи Зейналабдину Тагиеву в том, что он, Тагиев, предоставляет мне в течение пяти лет денежные средства для продолжения моего образования в высшем учебном заведении: в течение первых двух лет — по 600 манатов за каждый год, а в течение последующих трёх лет — по 360 манатов за каждый год, что в общей сложности составляет две тысячи двести восемьдесят (2280) манатов. Обязуюсь после завершения курса наук полностью возвратить указанную сумму ему, Тагиеву. В удостоверение сего подписываюсь.`,
+
+title2: "Письмо Н. Нариманова Г. З. Тагиеву",
+subtitle2: "ИЗ ОДЕССЫ",
+
+text2: `Письмо, отправленное студентом медицинского факультета господином Нериманом беком Наримановым.
+
+Уважаемый Гаджи!
+
+От имени мусульманских студентов пишем Вам и сообщаем, что Вас избрали постоянным почётным членом, выражая Вам огромную благодарность. «Да здравствует Гаджи!» — говорят они, с уважением произнося Ваше имя!
+
+Считаю своим долгом также рассказать о поездке студентов в Бахчисарай и Симферополь. Итак, 5 января восемь студентов прибыли в Бахчисарай. Там мы встретились с известными людьми города и узнали друг о друге, о наших нуждах и целях. На следующий день городской голова Мустафа Мирза пригласил всех на обед. На третий день Исмаил Гаспринский, а затем и бахчисарайские учителя также пригласили всех на обед и оказали нам почести.
+
+7 января в ответ на оказанное нам гостеприимство мы, в свою очередь, устроили в Бахчисарае театральное представление для мусульман, и жители Бахчисарая остались довольны студентами. 8 января вместе с Исмаил беком Гаспринским мы посетили мусульманские школы Бахчисарая.
+
+Это нечто особенное! Поистине, это нечто особенное: нужны глаза, чтобы увидеть эти школы, и уши, чтобы услышать татарских наставников, подобных соловьям! Такого усердия и такого самопожертвования я ещё не встречал.
+
+В какую бы школу мы ни приходили, там татарские дети в 7-м и 8-м классах пишут и читают на тюркском языке. А когда они отвечают на вопросы по истории, географии и другим светским наукам, этому невозможно не удивляться.
+
+Если так будет продолжаться ещё десять лет, можно сказать, что в школах Бахчисарая вырастут самые усердные, самые образованные и самые сведущие мусульманские дети, которые станут украшением своего народа!
+
+Школы Бахчисарая и работающие здесь учителя представляют собой совершенно особый мир! Если бы в каждом городе Кавказа была хотя бы одна такая школа, мусульмане Кавказа, несомненно, изменились бы за гораздо более короткое время. Разумеется, в каждом городе должен был бы быть такой человек, как Исмаил бек Гаспринский. Но, увы, этот уважаемый человек среди нас одинок.
+
+По одной лишь газете «Терджиман» невозможно в полной мере оценить то уважение, которое Исмаил бек Гаспринский испытывает к своему народу. Нужно побывать в Бахчисарае, чтобы понять, какие дела совершает этот самоотверженный мусульманин, живя в маленьком и некрасивом Бахчисарае, и какие услуги он оказывает своему народу.
+
+Описать словами и изложить на бумаге установленные здесь порядки и правила, а также состояние школ невозможно. Одним из важнейших дел нашего времени было бы отправить из Баку в Бахчисарай одного школьного учителя, чтобы он ознакомился с новым методом обучения и школьными программами.
+
+Этот учитель также смог бы познакомиться с женской школой. В Бахчисарае много женских школ. Однако первую школу открыла сестра Исмаила Гаспринского, и она представляет собой чрезвычайно красивое и благоустроенное учебное заведение. Эта женщина прилагает большие усилия и оказывает значительные услуги татарским девочкам.
+
+Да здравствуют брат и сестра! Да здравствуют и процветают школы Бахчисарая!
+
+12 января мы отправились из Бахчисарая в Симферополь и там также устроили театральное представление для мусульман. Деятели Симферополя оказали нам большое уважение.
+
+Всегда готов служить Вам.`,
+
+},
+
+en: {
+title1: "Debt Repayment Undertaking to H. Z. Taghiyev",
+subtitle1: "N. Narimanov",
+date1: "27 June 1902",
+
+text1: `On 27 June 1902, I, the undersigned Collegiate Secretary Nariman Narimanov, hereby give this undertaking to the Honorary Citizen Haji Zeynalabdin Taghiyev, stating that he, Taghiyev, shall provide me with financial support for five years so that I may continue my studies at a higher educational institution: 600 manats per year for each of the first two years and 360 manats per year for each of the following three years, amounting in total to two thousand two hundred and eighty (2,280) manats. I undertake to repay the entire amount to him, Taghiyev, after completing my course of studies. In witness whereof, I sign this undertaking.`,
+
+title2: "Letter from N. Narimanov to H. Z. Taghiyev",
+subtitle2: "FROM ODESSA",
+
+text2: `A letter sent by Mr. Nariman bey Narimanov, a student of the Faculty of Medicine.
+
+Honourable Haji,
+
+On behalf of the Muslim students, we are writing to inform you that you have been elected a permanent honorary member, and they express their profound gratitude to you. “Long live Haji!” they say, mentioning your name with respect.
+
+I also consider it my duty to write about the students’ journey to Bakhchisaray and Simferopol. On 5 January, eight students arrived in Bakhchisaray. There, we met the prominent people of the town and learned about one another, our concerns and our aims. On the following day, the city head, Mustafa Mirza, invited everyone to lunch. On the third day, Ismail Gasprinsky, followed by the teachers of Bakhchisaray, also invited everyone to lunch and honoured us with their hospitality.
+
+On 7 January, in return for the hospitality shown to us, we held a theatrical performance for the Muslims of Bakhchisaray, and the residents of the town were pleased with the students. On 8 January, together with Ismail bey Gasprinsky, we visited the Muslim schools in Bakhchisaray.
+
+This is something extraordinary! Truly extraordinary: one must have eyes to see these schools and ears to listen to the Tatar teachers, who are like nightingales! I have never witnessed such dedication and self-sacrifice.
+
+In every school we visited, Tatar children in the seventh and eighth grades were writing and reading in the Turkic language. Moreover, one cannot help but be astonished by their answers to questions on history, geography and other secular subjects.
+
+If this progress continues for another ten years, it can be said that the schools of Bakhchisaray will produce the most dedicated, educated and knowledgeable Muslim children, who will become the pride of their nation!
+
+The schools of Bakhchisaray and the teachers working there are a world apart! If every town in the Caucasus had even one such school, the Muslims of the Caucasus would undoubtedly undergo a transformation in a much shorter time. Of course, every town would need to have a person like Ismail bey Gasprinsky. But, alas, this esteemed man stands alone among us.
+
+The newspaper Tercüman alone cannot convey the full extent of Ismail bey Gasprinsky’s devotion to his people. One must travel to Bakhchisaray to understand what this dedicated Muslim is doing while living in the small and unattractive town of Bakhchisaray, and what services he is rendering to his people.
+
+It is impossible to describe in words or put down on paper the practices and rules established here, or the condition of the schools. One of the most important tasks of our time would be to send a schoolteacher from Baku to Bakhchisaray so that he could become familiar with the new method of education and the school curricula.
+
+That teacher could also become acquainted with the girls’ school. There are many girls’ schools in Bakhchisaray. However, the first school was opened by Ismail Gasprinsky’s sister, and it is an exceptionally beautiful and well-presented school. This woman makes great efforts and renders significant services to Tatar girls.
+
+Long live the sister and brother! Long live and prosper the schools of Bakhchisaray!
+
+On 12 January, we travelled from Bakhchisaray to Simferopol, where we also held a theatrical performance for the Muslims. The prominent activists of Simferopol showed us great respect.
+
+Always at your service.`
+}
+
+};
+
+function changeLanguage(lang) {
+    document.getElementById("title1").innerText = content[lang].title1;
+    document.getElementById("subtitle1").innerText = content[lang].subtitle1;
+    document.getElementById("date1").innerText = content[lang].date1;
+    document.getElementById("text1").innerText = content[lang].text1;
+
+    document.getElementById("title2").innerText = content[lang].title2;
+    document.getElementById("subtitle2").innerText = content[lang].subtitle2;
+    document.getElementById("text2").innerText = content[lang].text2;
+
+    document.documentElement.lang = lang;
+
+    ["az", "ru", "en"].forEach(function(language) {
+        document.getElementById(language + "Btn").classList.remove("active");
+    });
+
+    document.getElementById(lang + "Btn").classList.add("active");
+}
+
+changeLanguage("az");
+
+</script>
+
+</body>
+</html>

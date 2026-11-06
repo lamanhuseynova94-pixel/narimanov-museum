@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nəriman Nərimanovun Atatürkə məktubu</title>
+<style>
+body {
+  margin: 0;
+  background: #f2f0eb;
+  color: #292929;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.8;
+}
+header {
+  background: #642634;
+  color: white;
+  text-align: center;
+  padding: 30px 18px;
+}
+header h1 {
+  font-size: 30px;
+  line-height: 1.3;
+}
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+.sheet {
+  background: #fffdf8;
+  padding: 35px;
+  border: 1px solid #e2ddd3;
+}
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+button {
+  padding: 10px 18px;
+  border: 1px solid #642634;
+  border-radius: 22px;
+  background: white;
+  color: #642634;
+  cursor: pointer;
+  font-weight: bold;
+}
+button.active, button:hover {
+  background: #642634;
+  color: white;
+}
+h2 { color: #642634; }
+p { margin-bottom: 17px; }
+.letter {
+  border-left: 3px solid #c7a2a8;
+  padding-left: 18px;
+  margin: 22px 0;
+}
+.signature { font-weight: bold; }
+footer {
+  text-align: center;
+  color: #777;
+  padding: 25px;
+  font: 13px Arial, sans-serif;
+}
+@media(max-width:600px) {
+  .sheet { padding: 20px; }
+  header h1 { font-size: 24px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Nəriman Nərimanovun Mustafa Kamal Atatürkə məktubu</h1>
+<p>Tarixi məktublar · N. Nərimanov Memorial Muzeyi</p>
+</header>
+
+<main>
+<section class="sheet">
+
+<div class="languages">
+<button class="active" onclick="changeLanguage('az')">Azərbaycan dili</button>
+<button onclick="changeLanguage('ru')">Русский</button>
+<button onclick="changeLanguage('en')">English</button>
+</div>
+
+<article id="content"></article>
+
+</section>
+</main>
+
+<footer>
+N. Nərimanov Memorial Muzeyi · Tarixi irsin rəqəmsal təqdimatı
+</footer>
+
+<script>
+const texts = {
+
+az: `
+<h2>M. K. Atatürkə məktub</h2>
+
+<div class="letter">
+<p><strong>TBMM Sədrliyinə,</strong></p>
+<p>“İmperializmə qarşı qazandığı bu böyük qələbələrə görə, qardaş türk xalqını, TBMM-ni və onun rəhbəri Mustafa Kamal Paşanı, Azərbaycan Sovet Sosialist Xalq Cümhuriyyəti və Azərbaycan xalqı adından təbrik edir və kutlayırıq.”</p>
+</div>
+
+<p>Nərimanov bu teleqramda əlavə olaraq bildirirdi ki, Azərbaycan xalqının bu qələbəsi şərəfinə 30 sistern neft, 2 sistern benzin və 8 sistern kerosin göndərilmişdir.</p>
+
+<p>1921-ci ilin may ayında yenə də Nərimanovun xüsusi göstərişi ilə Azərbaycan Hökuməti, Türkiyə Böyük Millət Məclisi (TBMM) Hökumətindən heç bir tələb gəlmədiyi halda, 62 sistern neft göndərdi.</p>
+
+<p>Həmin ay Azərbaycanın xarici işlər naziri M. D. Hüseynov TBMM sədrliyinə göndərdiyi məktubda belə yazırdı:</p>
+
+<div class="letter">
+<p><strong>TBMM Sədrliyinə,</strong></p>
+<p><strong>Bundan sonra Azərbaycan Hökuməti qardaş türk xalqının apardığı istiqlal müharibəsi davam etdiyi müddətdə hər ay 62 sistern neft və 3 vaqon kerosin göndərməyi öhdəsinə götürür.</strong></p>
+<p class="signature">M. D. Hüseynov<br>Azərbaycanın Xarici İşlər Naziri</p>
+</div>
+
+<p>Azərbaycan Nərimanovun rəhbərliyi dövründə bu öhdəliyinə müharibənin sonuna qədər sadiq qaldı.</p>
+
+<p>Aylıq göndərişlərlə yanaşı, 1922-ci ildə Azərbaycan Batum yolu ilə 9 min tondan çox kerosin və 350 ton benzin də göndərdi.</p>
+
+<p>Mustafa Kamal Paşa, 1921-ci ildə Azərbaycan rəhbəri Nərimanova məktub göndərərək borc pul verilməsi xahişi ilə müraciət etdi. Məktub 17 mart 1921-ci ildə TBMM-nin Bakıdakı səfiri Mahmut Şevket bəy tərəfindən Nərimanova çatdırıldı.</p>
+
+<p>Nərimanov, Azərbaycan Hökuməti daxilində bəzi nazirlərin etirazlarına baxmayaraq, Mustafa Kamal Paşanın xahişinə müsbət cavab verdi. Dərhal mövcud olan 500 kiloqram qızıl Ankaraya göndərildi. TBMM Hökuməti bu qızılın 200 kiloqramını dövlət büdcəsinə ayırdı. Qalan hissəsi isə silah və sursat alınmasına sərf olundu.</p>
+
+<p>Daha sonra Azərbaycan Hökumətinin Rusiyadan aldığı 10 milyon qızıl rubl da yenə Nərimanov tərəfindən Ankaraya göndərildi. Həmçinin, həmin məktuba əsasən Azərbaycan Hökuməti TBMM Hökumətinin tələbi olmadan 30 sistern neft, 2 sistern benzin və 8 sistern yağ göndərdi.</p>
+
+<p>Bütün bu yardımlar, müharibə şəraitində olan ölkənin çətinliklərinin yüngülləşməsinə böyük dəstək oldu. Xüsusilə, müharibə boyu yanacaq çatışmazlığı yaşanmadı.</p>
+
+<p>Nərimanov, 23 mart 1921-ci ildə Atatürkə yazdığı cavab məktubunda ardıcıl qazanılan qələbələr sayəsində türk xalqının imperializmdən qurtuluş günlərinin yaxınlaşdığını bildirdi. Bu münasibətlə TBMM Hökumətini, onun sədrini və qəhrəman Türk Ordusunu təbrik etdikdən sonra belə yazırdı:</p>
+
+<div class="letter">
+<p><strong>Paşam,</strong></p>
+<p><strong>Türk millətində belə bir ənənə vardır: Qardaş qardaşa borc verməz, qardaş hər vəziyyətdə qardaşının əlindən tutar. Biz qardaş xalqlarıq. Hər zaman və hər şəraitdə bir-birimizin əlindən tutacağıq. Bu gün etdiyimiz də qardaşın qardaş üçün etdiyindən başqa bir şey deyildir.</strong></p>
+<p class="signature">— Nərimanov</p>
+</div>
+`,
+
+ru: `
+<h2>Письмо Мустафе Кемалю Ататюрку</h2>
+
+<div class="letter">
+<p><strong>Председательству Великого национального собрания Турции (ВНСТ),</strong></p>
+<p>«От имени Азербайджанской Советской Социалистической Народной Республики и азербайджанского народа поздравляем и приветствуем братский турецкий народ, Великое национальное собрание Турции и его руководителя Мустафу Кемаля-пашу в связи с этой великой победой, одержанной над империализмом».</p>
+</div>
+
+<p>В этой телеграмме Нариманов дополнительно сообщал, что в честь этой победы азербайджанского народа было отправлено 30 цистерн нефти, 2 цистерны бензина и 8 цистерн керосина.</p>
+
+<p>В мае 1921 года по специальному распоряжению Нариманова правительство Азербайджана вновь отправило правительству Великого национального собрания Турции 62 цистерны нефти, хотя от него не поступало никаких требований.</p>
+
+<p>В том же месяце министр иностранных дел Азербайджана М. Д. Гусейнов направил в Председательство ВНСТ письмо следующего содержания:</p>
+
+<div class="letter">
+<p><strong>Председательству Великого национального собрания Турции,</strong></p>
+<p><strong>Правительство Азербайджана принимает на себя обязательство впредь ежемесячно отправлять 62 цистерны нефти и 3 вагона керосина на протяжении всей освободительной войны, которую ведёт братский турецкий народ.</strong></p>
+<p class="signature">М. Д. Гусейнов<br>Министр иностранных дел Азербайджана</p>
+</div>
+
+<p>В период руководства Нариманова Азербайджан оставался верен этому обязательству до окончания войны.</p>
+
+<p>Помимо ежемесячных поставок, в 1922 году Азербайджан отправил через Батум более 9 тысяч тонн керосина и 350 тонн бензина.</p>
+
+<p>В 1921 году Мустафа Кемаль-паша направил письмо руководителю Азербайджана Нариманову с просьбой предоставить заём. Письмо было передано Нариманову 17 марта 1921 года послом Великого национального собрания Турции в Баку Махмутом Шевкет-беем.</p>
+
+<p>Несмотря на возражения некоторых министров в правительстве Азербайджана, Нариманов положительно ответил на просьбу Мустафы Кемаль-паши. Незамедлительно имевшиеся в распоряжении 500 килограммов золота были отправлены в Анкару. Правительство ВНСТ выделило 200 килограммов этого золота в государственный бюджет. Оставшаяся часть была использована для приобретения оружия и боеприпасов.</p>
+
+<p>Позднее 10 миллионов золотых рублей, полученных правительством Азербайджана из России, также были отправлены Наримановым в Анкару. Кроме того, согласно этому письму, правительство Азербайджана без соответствующего требования со стороны правительства ВНСТ отправило 30 цистерн нефти, 2 цистерны бензина и 8 цистерн масла.</p>
+
+<p>Вся эта помощь стала значительной поддержкой, способствовавшей облегчению трудностей страны, находившейся в условиях войны. В частности, на протяжении всей войны не испытывалось недостатка в топливе.</p>
+
+<p>В ответном письме, написанном Ататюрку 23 марта 1921 года, Нариманов выразил мнение, что благодаря последовательным победам приближаются дни освобождения турецкого народа от империализма. Поздравив по этому случаю правительство ВНСТ, его председателя и героическую турецкую армию, он писал:</p>
+
+<div class="letter">
+<p><strong>Паша,</strong></p>
+<p><strong>У турецкого народа существует такая традиция: брат не даёт брату взаймы, брат в любой ситуации протягивает руку помощи своему брату. Мы — братские народы. Всегда и при любых обстоятельствах мы будем поддерживать друг друга. То, что мы делаем сегодня, — не что иное, как поступок брата ради брата.</strong></p>
+<p class="signature">— Нариманов</p>
+</div>
+`,
+
+en: `
+<h2>Letter to Mustafa Kemal Atatürk</h2>
+
+<div class="letter">
+<p><strong>To the Presidency of the Grand National Assembly of Turkey,</strong></p>
+<p>“On behalf of the Azerbaijan Soviet Socialist People's Republic and the people of Azerbaijan, we congratulate and salute the brotherly Turkish people, the Grand National Assembly of Turkey and its leader, Mustafa Kemal Pasha, on this great victory won against imperialism.”</p>
+</div>
+
+<p>In this telegram, Narimanov further stated that, in honour of this victory of the Azerbaijani people, 30 tank cars of oil, 2 tank cars of petrol and 8 tank cars of kerosene had been sent.</p>
+
+<p>In May 1921, once again on Narimanov's special instructions, the Government of Azerbaijan sent 62 tank cars of oil to the Government of the Grand National Assembly of Turkey, even though no request had been received from the latter.</p>
+
+<p>In the same month, M. D. Huseynov, Azerbaijan's Minister of Foreign Affairs, sent a letter to the Presidency of the Grand National Assembly of Turkey, stating:</p>
+
+<div class="letter">
+<p><strong>To the Presidency of the Grand National Assembly of Turkey,</strong></p>
+<p><strong>From this point onwards, the Government of Azerbaijan undertakes to send 62 tank cars of oil and 3 railway wagons of kerosene every month for the entire duration of the War of Independence being waged by the brotherly Turkish people.</strong></p>
+<p class="signature">M. D. Huseynov<br>Minister of Foreign Affairs of Azerbaijan</p>
+</div>
+
+<p>During Narimanov's leadership, Azerbaijan remained faithful to this commitment until the end of the war.</p>
+
+<p>In addition to the monthly deliveries, in 1922 Azerbaijan also sent more than 9,000 tonnes of kerosene and 350 tonnes of petrol via Batumi.</p>
+
+<p>In 1921, Mustafa Kemal Pasha sent a letter to Narimanov, the leader of Azerbaijan, requesting a loan. The letter was delivered to Narimanov on 17 March 1921 by Mahmut Şevket Bey, the ambassador of the Government of the Grand National Assembly of Turkey in Baku.</p>
+
+<p>Despite objections from some ministers within the Azerbaijani Government, Narimanov responded positively to Mustafa Kemal Pasha's request. The available 500 kilograms of gold were immediately sent to Ankara. The Government of the Grand National Assembly of Turkey allocated 200 kilograms of this gold to the state budget. The remaining amount was used to purchase weapons and ammunition.</p>
+
+<p>Later, the 10 million gold roubles received by the Government of Azerbaijan from Russia were also sent to Ankara by Narimanov. Furthermore, in accordance with this letter, the Government of Azerbaijan sent 30 tank cars of oil, 2 tank cars of petrol and 8 tank cars of oil without any request from the Government of the Grand National Assembly of Turkey.</p>
+
+<p>All this assistance provided significant support in alleviating the difficulties faced by the country during wartime. In particular, there was no shortage of fuel throughout the war.</p>
+
+<p>In his reply to Atatürk, written on 23 March 1921, Narimanov stated that, thanks to the successive victories, the days when the Turkish people would free themselves from imperialism were approaching. After congratulating the Government of the Grand National Assembly of Turkey, its President and the heroic Turkish Army on these achievements, he wrote:</p>
+
+<div class="letter">
+<p><strong>Pasha,</strong></p>
+<p><strong>There is a tradition among the Turkish people: a brother does not lend money to his brother; a brother extends a helping hand to his brother under all circumstances. We are brotherly peoples. At all times and under all circumstances, we will support one another. What we are doing today is nothing other than what one brother does for another.</strong></p>
+<p class="signature">— Narimanov</p>
+</div>
+`
+};
+
+function changeLanguage(lang) {
+  document.getElementById("content").innerHTML = texts[lang];
+  document.getElementById("content").lang = lang;
+  document.querySelectorAll("button").forEach(button => {
+    button.classList.toggle("active", button.getAttribute("onclick").includes(lang));
+  });
+  document.documentElement.lang = lang;
+}
+
+changeLanguage("az");
+</script>
+
+</body>
+</html><!-- Update for GitHub Pages -->

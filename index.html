@@ -1,43 +1,131 @@
-
 <!DOCTYPE html>
 <html lang="az">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Nərimanov Memorial Muzeyi</title>
+
 <style>
-body{margin:0;background:#f5f0e6;color:#292b24;font-family:Georgia,serif;text-align:center}
-header{background:#263c35;color:white;padding:40px 15px}
-h1{font-size:25px}
-main{max-width:750px;margin:35px auto;padding:20px}
-article{background:white;padding:25px;margin:20px 0;border-left:4px solid #aa8950}
-button{padding:10px 20px;margin:5px;background:#263c35;color:white;border:0;cursor:pointer}
-footer{background:#263c35;color:white;padding:20px}
+body {
+    margin: 0;
+    background: #f5f0e6;
+    color: #292b24;
+    font-family: Georgia, serif;
+    text-align: center;
+}
+
+header {
+    background: #263c35;
+    color: white;
+    padding: 40px 15px;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+main {
+    max-width: 750px;
+    margin: 35px auto;
+    padding: 20px;
+}
+
+article {
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-left: 4px solid #aa8950;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background: #263c35;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+.letter-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    background: #263c35;
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background: #263c35;
+    color: white;
+    padding: 20px;
+}
 </style>
 </head>
+
 <body>
+
 <header>
 <h1>N. NƏRİMANOV MEMORIAL MUSEUM</h1>
 <p>SCAN & HEAR: HISTORIC LETTERS</p>
 </header>
+
 <main>
-<h2>Tarixi məktubların səsinə qulaq asın</h2>
+
+<h2>Tarixi məktublarla tanış olun</h2>
+
 <button onclick="az()">AZ</button>
 <button onclick="ru()">RU</button>
 <button onclick="en()">EN</button>
+
 <article>
-<h2 id="title">N.Nərimanovun oğlu Nəcəfə məktubu</h2>
+<h2 id="title">N. Nərimanovun oğlu Nəcəfə bitməmiş məktubu</h2>
+
 <p id="date">Moskva, 28 yanvar 1925-ci il</p>
-<p id="desc">Muzeydə qorunan tarixi məktublarla tanış olun. Orijinal sənədləri oxuyun və dinləyin.</p>
+
+<p id="desc">
+Muzeydə qorunan tarixi məktubların mətnləri ilə tanış olun.
+</p>
+
+<a class="letter-link"
+href="narimanov_letter_trilingual_qr_page.html"
+id="link">
+Məktubu oxuyun
+</a>
+
 </article>
+
 <h3>Nərimanov Memorial Muzeyi</h3>
 <p>6000-dən çox eksponatın qorunduğu tarixi məkan.</p>
+
 </main>
-<footer>Scan & Hear | 2026</footer>
+
+<footer>
+Scan & Hear | 2026
+</footer>
+
 <script>
-function az(){title.innerText="N.Nərimanovun oğlu Nəcəfə məktubu";date.innerText="Moskva, 28 yanvar 1925-ci il";desc.innerText="Muzeydə qorunan tarixi məktublarla tanış olun."}
-function ru(){title.innerText="Письмо Н. Нариманова сыну Наджафу";date.innerText="Москва, 28 января 1925 года";desc.innerText="Познакомьтесь с историческими письмами музея."}
-function en(){title.innerText="N. Narimanov's letter to his son Najaf";date.innerText="Moscow, 28 January 1925";desc.innerText="Discover the historical letters preserved in the museum."}
+function az() {
+title.innerText = "N. Nərimanovun oğlu Nəcəfə bitməmiş məktubu";
+date.innerText = "Moskva, 28 yanvar 1925-ci il";
+desc.innerText = "Muzeydə qorunan tarixi məktubların mətnləri ilə tanış olun.";
+link.innerText = "Məktubu oxuyun";
+}
+
+function ru() {
+title.innerText = "Незаконченное письмо Н. Нариманова сыну Наджафу";
+date.innerText = "Москва, 28 января 1925 года";
+desc.innerText = "Познакомьтесь с текстами исторических писем, хранящихся в музее.";
+link.innerText = "Прочитать письмо";
+}
+
+function en() {
+title.innerText = "N. Narimanov's unfinished letter to his son Najaf";
+date.innerText = "Moscow, 28 January 1925";
+desc.innerText = "Explore the texts of historical letters preserved in the museum.";
+link.innerText = "Read the letter";
+}
 </script>
+
 </body>
 </html>
